@@ -33,6 +33,13 @@
                 }
                 Console.WriteLine("Frequency of the word");
                 hash.Display();
+                //remove words avoidable in paragraph
+                int freq = hash.Get("avoidable");
+                Console.WriteLine("Frequency of the word Avoidable: " + freq);
+                hash.Remove("avoidable");
+                freq = hash.Get("avoidable");
+                Console.WriteLine("Frequency of the word Avoidable after removing: " + freq);
+                hash.Display();
             }
         }
     }
